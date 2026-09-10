@@ -31,20 +31,40 @@ Built with plain HTML, CSS, and JavaScript, with subtle animations and a focus o
 | `index.html` | Page content, sections, and project links |
 | `style.css` | Theme, typography, responsive layouts, and hover effects |
 | `script.js` | Navigation, animations, smooth scrolling, and email copying |
-| `constellation.js` | Hero background, particle settings, and animation lifecycle |
-| `assets/` | Project screenshots, fonts, icons, and bundled libraries |
-| `CREDITS.md` | Library, font, and image sources |
+| `assets/projects/` | Actual screenshots from your repositories, optimized as WebP |
+| `assets/fonts/` | Space Grotesk, Inter, and their font licenses |
+| `assets/vendor/` | GSAP 3.13.0, ScrollTrigger 3.13.0, and Lenis 1.3.26 |
+| `CREDITS.md` | Library and project sources |
 
-## Run locally
+## Design tokens
 
-1. Clone this repository or download and extract the ZIP.
-2. Open `index.html` in your browser.
+The `:root` block near the top of `style.css` controls the theme.
 
-Keep the files and `assets` folder together. No installation or build step is required. You can also use VS Code with Live Server while editing.
+| Token | Color | Use |
+| --- | --- | --- |
+| `--bg` | `#0b1220` | Main background |
+| `--surface` | `#121b2e` | Cards and panels |
+| `--surface-2` | `#17233a` | Secondary surfaces |
+| `--border` | `#22304a` | Dividers and outlines |
+| `--text` | `#e8eaf0` | Primary text |
+| `--text-muted` | `#98a2b8` | Secondary text, slightly brighter for readability |
+| `--accent` | `#f5a623` | Buttons, links, and small highlights |
 
-The portfolio can render offline; external project and social links require an internet connection.
+Headings use Space Grotesk; body text uses Inter. Both fonts are local.
 
-The hero's constellation background uses Canvas 2D. Motion and particle settings are defined at the top of `constellation.js`; colors and text shading are controlled by `style.css`.
+## Editing guide
+
+**Content:** edit `index.html` directly. The page does not depend on a fetched JSON file or JavaScript-generated content.
+
+**Projects:** update the relevant article in the Work section. Project links point to their individual repositories. The three browser projects also have live-demo links. Replace screenshots in `assets/projects/` and keep each image's `alt`, `width`, and `height` attributes accurate.
+
+**Email:** update the two `mailto:` links and the visible `.email-link` text. The copy button reads that visible email automatically. Email links open the visitor's email app; there is no form server or simulated message submission.
+
+**Animations:** the hero timeline is in `setupMotion()` in `script.js`. Section content uses `data-reveal`. Primary buttons use `data-magnetic`. The CSS does not hide content before JavaScript runs, so a missing animation library does not leave the page blank.
+
+**Smooth scrolling:** removing the Lenis script and stylesheet tags from `index.html` restores native scrolling. Touch scrolling remains native even with Lenis enabled.
+
+**Experience:** the internship lists Merotech, using your more recent LinkedIn information, alongside the previously supplied dates, location, and responsibilities.
 
 ## Credits
 
