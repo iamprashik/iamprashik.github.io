@@ -36,6 +36,7 @@
     <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
     <script src="assets/vendor/lenis.min.js" defer></script>
     <script src="script.js" defer></script>
+    <script src="constellation.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -112,6 +113,9 @@
       <!-- HERO -->
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="hero__glow" aria-hidden="true"></div>
+        <div class="hero__constellation" aria-hidden="true">
+          <canvas id="constellationCanvas"></canvas>
+        </div>
         <div class="hero__status">
           <span class="hero__dot" aria-hidden="true"></span>Open to junior developer opportunities
         </div>
@@ -526,9 +530,7 @@
             </div>
           </div>
         </div>
-        <p class="skills__note" data-reveal>
-          Learning by building, one project at a time.
-        </p>
+        <p class="skills__note" data-reveal>Learning by building, one project at a time.</p>
       </section>
 
       <!-- EDUCATION & EXPERIENCE -->

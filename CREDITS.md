@@ -14,6 +14,12 @@ The vendor files are stored locally and retain their original distribution heade
 
 The small arrow, copy, check, code, and social UI icons are inline SVG. The favicon is a text monogram. The schematic grid and soft animated glow are CSS.
 
+## Constellation background
+
+The hero background is adapted from the [ThreeUI Constellation Field](https://threeui.com/backgrounds/constellation-field/constellation-field) HTML example supplied by Prashik, together with his React configuration snippet. The supplied HTML renders its nodes, links, and pointer attraction with Canvas 2D, despite referring to WebGL in its comments.
+
+`constellation.js` preserves that approach in plain JavaScript and maps the supplied speed, size, stroke, link-length, density, opacity, and color-adjustment settings to this renderer. It uses the portfolio's amber accent, scales to the hero, caps rendering resolution and particle counts, and supports reduced motion, visibility changes, and offscreen pauses. This is an adaptation of the supplied HTML, not the bundled `@designcodeio/threeui` React component. Attribution to the original effect is retained in the source.
+
 ## Project information and screenshots
 
 Descriptions and links were checked against these project READMEs in September 2026:
