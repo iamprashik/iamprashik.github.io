@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1220" />
+    <meta
+      name="description"
+      content="Prashik Koirala, a frontend developer in Toronto, Ontario. I build web experiences that feel good to use. Explore my projects, skills, and experience."
+    />
+    <meta property="og:title" content="Prashik Koirala — Frontend Developer" />
+    <meta
+      property="og:description"
+      content="Hey, I’m Prashik. I build web experiences that feel good to use — with curiosity, care, and an eye for the details."
+    />
+    <meta property="og:type" content="website" />
+    <title>Prashik Koirala — Frontend Developer</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="assets/fonts/space-grotesk-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/inter-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="assets/vendor/lenis.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="assets/vendor/gsap.min.js" defer></script>
+    <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+    <script src="assets/vendor/lenis.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="grid-overlay" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Inline symbols keep the interface icons sharp and available offline. -->
+    <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12" /></symbol>
+      <symbol id="icon-down" viewBox="0 0 24 24"><path d="M12 4v16m-6-6 6 6 6-6" /></symbol>
+      <symbol id="icon-copy" viewBox="0 0 24 24">
+        <rect x="8" y="8" width="12" height="12" rx="2" />
+        <path d="M15 8V4H4v11h4" />
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" /></symbol>
+      <symbol id="icon-code" viewBox="0 0 24 24">
+        <path d="m8 7-5 5 5 5m8-10 5 5-5 5M14 4l-4 16" />
+      </symbol>
+      <symbol id="icon-network" viewBox="0 0 24 24">
+        <rect x="8" y="2" width="8" height="6" rx="1" />
+        <rect x="2" y="16" width="7" height="6" rx="1" />
+        <rect x="15" y="16" width="7" height="6" rx="1" />
+        <path d="M12 8v4M5.5 16v-4h13v4" />
+      </symbol>
+      <symbol id="icon-lock" viewBox="0 0 24 24">
+        <rect x="5" y="10" width="14" height="11" rx="2" />
+        <path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3" />
+      </symbol>
+      <symbol id="icon-chart" viewBox="0 0 24 24"><path d="M3 3v18h18M6 14l4-6 5 7 6-10" /></symbol>
+      <symbol id="icon-github" viewBox="0 0 24 24">
+        <path
+          d="M9 19c-4 1-4-2-6-2m12 5v-4a3.5 3.5 0 0 0-1-2.7c3.3-.4 6.8-1.6 6.8-7.3a5.7 5.7 0 0 0-1.5-4 5.2 5.2 0 0 0-.1-4s-1.3-.4-4.3 1.6a14.8 14.8 0 0 0-7.8 0C5.1-1.4 3.8-1 3.8-1a5.2 5.2 0 0 0-.1 4A5.7 5.7 0 0 0 2.2 7c0 5.7 3.5 6.9 6.8 7.3A3.5 3.5 0 0 0 8 17v5"
+          transform="translate(1 2) scale(.85)"
+        />
+      </symbol>
+    </svg>
+
+    <header class="nav">
+      <div class="nav__inner">
+        <a href="#top" class="nav__mark" aria-label="Prashik Koirala, back to top">PK</a>
+        <nav class="nav__links" aria-label="Main navigation">
+          <a href="#work">Work</a><a href="#about">About</a><a href="#skills">Skills</a
+          ><a href="#journey">Journey</a><a href="#contact">Contact</a>
+        </nav>
+        <a href="#contact" class="nav__cta"
+          >Get in touch <svg class="icon"><use href="#icon-arrow" /></svg
+        ></a>
+        <button
+          class="nav__toggle"
+          type="button"
+          aria-controls="mobile-navigation"
+          aria-expanded="false"
+          aria-label="Open navigation"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+      <nav
+        class="nav__mobile"
+        id="mobile-navigation"
+        aria-label="Mobile navigation"
+        data-lenis-prevent
+        hidden
+      >
+        <a href="#work">Selected work <span>01</span></a
+        ><a href="#about">About <span>02</span></a
+        ><a href="#skills">Toolkit <span>03</span></a
+        ><a href="#journey">Journey <span>04</span></a
+        ><a href="#contact">Contact <span>05</span></a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero__glow" aria-hidden="true"></div>
+        <div class="hero__status">
+          <span class="hero__dot" aria-hidden="true"></span>Open to junior developer opportunities
+        </div>
+        <h1 class="hero__title" id="hero-title">
+          <span class="line"><span class="hero__line">Prashik Koirala</span></span>
+        </h1>
+        <p class="hero__role">Frontend Developer</p>
+        <p class="hero__sub">
+          Hey, I’m Prashik. I build web experiences that feel good to use — with curiosity, care,
+          and an eye for the details.
+        </p>
+        <div class="hero__actions">
+          <a href="#work" class="btn btn--primary" data-magnetic
+            >See my work <svg class="icon"><use href="#icon-down" /></svg
+          ></a>
+
+          <a
+            href="https://github.com/iamprashik"
+            class="btn btn--text"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub <svg class="icon"><use href="#icon-arrow" /></svg
+          ></a>
+        </div>
+        <dl class="hero__readout">
+          <div>
+            <dt>Based</dt>
+            <dd>Toronto, Ontario</dd>
+          </div>
+          <div>
+            <dt>Focus</dt>
+            <dd>Frontend development</dd>
+          </div>
+          <div>
+            <dt>Education</dt>
+            <dd>Computer Science · 2026</dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- WORK: Musicozy leads, with compact rows and three systems projects below. -->
+      <section id="work" class="work" aria-labelledby="work-title">
+        <div class="section-head" data-reveal>
+          <span class="section-kicker">01 / PROJECTS</span>
+          <h2 id="work-title">Selected work</h2>
+          <p>
+            Interfaces, experiments, and the systems behind them. Each project taught me something
+            different.
+          </p>
+        </div>
+
+        <article class="project project--featured" aria-labelledby="musicozy-title">
+          <div class="project__feature-head" data-reveal>
+            <div>
+              <span class="project__tag">01 / FEATURED PROJECT</span>
+              <h3 id="musicozy-title">Musicozy</h3>
+            </div>
+            <div class="project__links">
+              <a
+                class="project__link"
+                href="https://iamprashik.github.io/Musicozy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Live demo <svg class="icon"><use href="#icon-arrow" /></svg
+                ><span class="sr-only"> — Musicozy</span></a
+              ><a
+                class="project__link project__link--secondary"
+                href="https://github.com/iamprashik/Musicozy"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Source code <svg class="icon"><use href="#icon-github" /></svg
+                ><span class="sr-only"> — Musicozy</span></a
+              >
+            </div>
+          </div>
+          <a
+            class="project__visual project__visual--music"
+            href="https://iamprashik.github.io/Musicozy/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Musicozy live demo"
+            data-reveal
+          >
+            <img
+              src="assets/projects/musicozy.webp"
+              width="1600"
+              height="768"
+              alt="Musicozy music player with playlists, tracks, and a now playing panel"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <div class="project__info project__feature-body" data-reveal>
+            <div>
+              <p>
+                A music player built around my love of finding a good song. Custom playlists, saved
+                likes, search, and keyboard controls come together in a responsive three-panel
+                interface.
+              </p>
+              <ul class="project__stack" aria-label="Musicozy technologies">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>HTML Audio</li>
+              </ul>
+            </div>
+            <p class="project__detail">
+              <strong>Saving custom artwork.</strong> I used IndexedDB for uploaded playlist covers,
+              keeping large image files out of localStorage, which holds likes and settings.
+            </p>
+          </div>
+        </article>
+
+        <article class="project project--reverse" aria-labelledby="calculator-title">
+          <a
+            class="project__visual project__visual--calculator"
+            href="https://iamprashik.github.io/ios-inspired-calculator/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open iOS-inspired Calculator live demo"
+            data-reveal
+          >
+            <img
+              src="assets/projects/calculator.webp"
+              width="467"
+              height="915"
+              alt="iOS-inspired calculator with a dark display, round keys, and orange operators"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <div class="project__info" data-reveal>
+            <span class="project__tag">02 / INTERACTION DESIGN</span>
+            <h3 id="calculator-title">iOS-inspired Calculator</h3>
+            <p>
+              An iOS-inspired calculator with keyboard input, percentage calculations, and familiar
+              button feedback.
+            </p>
+            <p class="project__detail">
+              <strong>Operator precedence.</strong> A two-pass evaluator handles multiplication and
+              division before addition and subtraction, without using <code>eval()</code>.
+            </p>
+            <ul class="project__stack" aria-label="Calculator technologies">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>DOM</li>
+            </ul>
+            <div class="project__links">
+              <a
+                class="project__link"
+                href="https://iamprashik.github.io/ios-inspired-calculator/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Live demo <svg class="icon"><use href="#icon-arrow" /></svg
+                ><span class="sr-only"> — Calculator</span></a
+              ><a
+                class="project__link project__link--secondary"
+                href="https://github.com/iamprashik/ios-inspired-calculator"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Source code <svg class="icon"><use href="#icon-github" /></svg
+                ><span class="sr-only"> — Calculator</span></a
+              >
+            </div>
+          </div>
+        </article>
+
+        <article class="project" aria-labelledby="amazon-title">
+          <a
+            class="project__visual project__visual--amazon"
+            href="https://iamprashik.github.io/amazon-ui-clone/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Amazon UI Clone live demo"
+            data-reveal
+          >
+            <img
+              src="assets/projects/amazon.webp"
+              width="1600"
+              height="778"
+              alt="Amazon homepage recreation showing navigation, a hero banner, and product category cards"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <div class="project__info" data-reveal>
+            <span class="project__tag">03 / FRONTEND DEVELOPMENT</span>
+            <h3 id="amazon-title">Amazon UI Clone</h3>
+            <p>
+              A desktop-focused HTML/CSS recreation of Amazon’s homepage, from navigation to product
+              categories.
+            </p>
+            <p class="project__detail">
+              <strong>Reusable layout.</strong> I reused product-card classes inside a wrapping
+              Flexbox layout to keep category spacing and structure consistent.
+            </p>
+            <ul class="project__stack" aria-label="Amazon UI Clone technologies">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>Flexbox</li>
+            </ul>
+            <div class="project__links">
+              <a
+                class="project__link"
+                href="https://iamprashik.github.io/amazon-ui-clone/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Live demo <svg class="icon"><use href="#icon-arrow" /></svg
+                ><span class="sr-only"> — Amazon UI Clone</span></a
+              ><a
+                class="project__link project__link--secondary"
+                href="https://github.com/iamprashik/amazon-ui-clone"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Source code <svg class="icon"><use href="#icon-github" /></svg
+                ><span class="sr-only"> — Amazon UI Clone</span></a
+              >
+            </div>
+          </div>
+        </article>
+
+        <div class="work__more-head" data-reveal>
+          <h3>Beyond the interface</h3>
+          <p>A few projects exploring simulations, networking, and encryption.</p>
+        </div>
+        <div class="experiments">
+          <article class="experiment" data-reveal>
+            <div class="experiment__top">
+              <svg class="icon"><use href="#icon-chart" /></svg
+              ><span class="experiment__number">04</span>
+            </div>
+            <h3>Wolf–Sheep Ecosystem</h3>
+            <p>
+              An agent-based predator–prey simulation, extended with farmers and dogs to explore how
+              interventions affect an ecosystem.
+            </p>
+            <ul class="project__stack" aria-label="Simulation technologies">
+              <li>Python</li>
+              <li>Mesa</li>
+              <li>Solara</li>
+            </ul>
+            <a
+              class="project__link"
+              href="https://github.com/iamprashik/wolf_sheep_simulation"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View project <svg class="icon"><use href="#icon-arrow" /></svg
+              ><span class="sr-only"> — Wolf–Sheep Ecosystem</span></a
+            >
+          </article>
+          <article class="experiment" data-reveal>
+            <div class="experiment__top">
+              <svg class="icon"><use href="#icon-lock" /></svg
+              ><span class="experiment__number">05</span>
+            </div>
+            <h3>Encrypted Chat</h3>
+            <p>
+              A Python learning project using RSA key exchange and AES message encryption. The relay
+              server forwards ciphertext between clients.
+            </p>
+            <ul class="project__stack" aria-label="Chat technologies">
+              <li>Python</li>
+              <li>RSA / AES</li>
+              <li>Sockets</li>
+            </ul>
+            <a
+              class="project__link"
+              href="https://github.com/iamprashik/e2ee-chat"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View project <svg class="icon"><use href="#icon-arrow" /></svg
+              ><span class="sr-only"> — Encrypted Chat</span></a
+            >
+          </article>
+          <article class="experiment" data-reveal>
+            <div class="experiment__top">
+              <svg class="icon"><use href="#icon-network" /></svg
+              ><span class="experiment__number">06</span>
+            </div>
+            <h3>Distributed File Retrieval</h3>
+            <p>
+              A tracker locates file chunks across servers. The client downloads the pieces through
+              TCP sockets and reconstructs the original file.
+            </p>
+            <ul class="project__stack" aria-label="File retrieval technologies">
+              <li>Python</li>
+              <li>TCP</li>
+              <li>SHA-256</li>
+            </ul>
+            <a
+              class="project__link"
+              href="https://github.com/iamprashik/distributed-file-retrieval"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View project <svg class="icon"><use href="#icon-arrow" /></svg
+              ><span class="sr-only"> — Distributed File Retrieval</span></a
+            >
+          </article>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="about" aria-labelledby="about-title">
+        <div class="section-head" data-reveal>
+          <span class="section-kicker">02 / A LITTLE BACKGROUND</span>
+          <h2 id="about-title">About</h2>
+        </div>
+        <div class="about__layout">
+          <div class="about__copy" data-reveal>
+            <p class="about__lead">
+              I’m a frontend developer in Toronto, Ontario, with a Computer Science background from
+              Algoma University and a habit of learning by building.
+            </p>
+            <p>
+              I enjoy turning an idea into something you can click, explore, and use. That curiosity
+              takes me from JavaScript interfaces to Python simulations and networking projects,
+              with plenty of debugging along the way.
+            </p>
+            <p>
+              Outside of code, I play guitar and listen to indie and alternative music. That
+              interest helped turn Musicozy from an idea into a project I wanted to keep improving.
+            </p>
+          </div>
+          <aside class="about__aside" aria-label="A few personal details" data-reveal>
+            <span class="about__aside-label">A FEW CONSTANTS</span>
+            <dl>
+              <div>
+                <dt>Home base</dt>
+                <dd>Toronto, Ontario</dd>
+              </div>
+              <div>
+                <dt>Current focus</dt>
+                <dd>Frontend development</dd>
+              </div>
+              <div>
+                <dt>How I learn</dt>
+                <dd>Build, test, refine, repeat</dd>
+              </div>
+              <div>
+                <dt>Off the keyboard</dt>
+                <dd>Guitar & indie music</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <!-- TOOLKIT -->
+      <section id="skills" class="skills" aria-labelledby="skills-title">
+        <div class="section-head" data-reveal>
+          <span class="section-kicker">03 / SKILLS & TOOLS</span>
+          <h2 id="skills-title">Toolkit</h2>
+          <p>
+            A frontend focus, supported by programming fundamentals and a habit of figuring things
+            out.
+          </p>
+        </div>
+        <div class="skills__grid">
+          <div class="skill" data-reveal>
+            <span class="skill__symbol" aria-hidden="true">&lt;/&gt;</span>
+            <div>
+              <span class="skill__label">Frontend</span>
+              <h3 class="skill__value">HTML5 · CSS3 · JavaScript</h3>
+              <p>Semantic pages, responsive layouts, DOM interactions, and application state.</p>
+            </div>
+          </div>
+          <div class="skill" data-reveal>
+            <span class="skill__symbol" aria-hidden="true">{ }</span>
+            <div>
+              <span class="skill__label">Programming</span>
+              <h3 class="skill__value">Python · Java · C#</h3>
+              <p>Object-oriented programming, scripts, desktop applications, and simulations.</p>
+            </div>
+          </div>
+          <div class="skill" data-reveal>
+            <span class="skill__symbol skill__symbol--small" aria-hidden="true">SQL</span>
+            <div>
+              <span class="skill__label">Data</span>
+              <h3 class="skill__value">MySQL · SQL</h3>
+              <p>Relational data, basic queries, and data retrieval.</p>
+            </div>
+          </div>
+          <div class="skill" data-reveal>
+            <span class="skill__symbol" aria-hidden="true"
+              ><svg class="icon"><use href="#icon-github" /></svg
+            ></span>
+            <div>
+              <span class="skill__label">Workflow</span>
+              <h3 class="skill__value">Git · GitHub</h3>
+              <p>Version control, project documentation, and iterative development.</p>
+            </div>
+          </div>
+          <div class="skill" data-reveal>
+            <span class="skill__symbol" aria-hidden="true"
+              ><svg class="icon"><use href="#icon-network" /></svg
+            ></span>
+            <div>
+              <span class="skill__label">Foundations</span>
+              <h3 class="skill__value">Algorithms · Systems</h3>
+              <p>Data structures, operating systems, networking, and cryptography coursework.</p>
+            </div>
+          </div>
+          <div class="skill" data-reveal>
+            <span class="skill__symbol" aria-hidden="true"
+              ><svg class="icon"><use href="#icon-code" /></svg
+            ></span>
+            <div>
+              <span class="skill__label">Practice</span>
+              <h3 class="skill__value">Debugging · Problem solving</h3>
+              <p>Reproducing issues, exploring edge cases, and improving usability.</p>
+            </div>
+          </div>
+        </div>
+        <p class="skills__note" data-reveal>
+          Learning by building, one project at a time.
+        </p>
+      </section>
+
+      <!-- EDUCATION & EXPERIENCE -->
+      <section id="journey" class="journey" aria-labelledby="journey-title">
+        <div class="section-head" data-reveal>
+          <span class="section-kicker">04 / EDUCATION & EXPERIENCE</span>
+          <h2 id="journey-title">The journey so far</h2>
+          <p>Learning the fundamentals, then putting them to work.</p>
+        </div>
+        <ol class="timeline">
+          <li class="timeline__item" data-reveal>
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <div class="timeline__date">Ongoing<span>Independent work</span></div>
+            <div class="timeline__content">
+              <h3>Personal projects & daily practice</h3>
+              <p class="timeline__org">Building, documenting, and improving</p>
+              <p>
+                Developing frontend projects, exploring Python systems, and building a consistent
+                coding habit. Each iteration is a chance to make the code clearer and the experience
+                better.
+              </p>
+            </div>
+          </li>
+          <li class="timeline__item" data-reveal>
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <div class="timeline__date">2023 — 2026<span>Education</span></div>
+            <div class="timeline__content">
+              <h3>Bachelor of Computer Science</h3>
+              <p class="timeline__org">Algoma University</p>
+              <p>
+                Coursework spanning data structures, algorithms, operating systems, cryptography,
+                and software development, with hands-on projects connecting theory to practice.
+              </p>
+            </div>
+          </li>
+          <li class="timeline__item" data-reveal>
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <div class="timeline__date">Jan — Jun 2022<span>Experience</span></div>
+            <div class="timeline__content">
+              <h3>Software Developer Intern</h3>
+              <p class="timeline__org">Merotech · Kathmandu, Nepal</p>
+              <p>
+                Contributed to web pages, worked with MySQL queries, used Git with a development
+                team, and tested and debugged application features.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- CONTACT: real links and an email-copy utility; no mock form submission. -->
+      <section id="contact" class="contact" aria-labelledby="contact-title">
+        <div class="contact__glow" aria-hidden="true"></div>
+        <div data-reveal>
+          <span class="section-kicker">05 / GET IN TOUCH</span>
+          <h2 id="contact-title">Let’s build <em>something.</em></h2>
+          <p>
+            Open to junior developer opportunities and interesting projects.<br />A role, an idea,
+            or a quick hello — I’d love to hear from you.
+          </p>
+        </div>
+        <div class="contact__links" data-reveal>
+          <a href="mailto:iamprashikkoirala@gmail.com" class="btn btn--primary" data-magnetic
+            >Email me <svg class="icon"><use href="#icon-arrow" /></svg></a
+          ><a
+            href="https://www.linkedin.com/in/prashik-koirala-b6a64b3b0/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--ghost"
+            >LinkedIn <svg class="icon"><use href="#icon-arrow" /></svg></a
+          ><a
+            href="https://github.com/iamprashik"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--ghost"
+            >GitHub <svg class="icon"><use href="#icon-arrow" /></svg
+          ></a>
+        </div>
+        <div class="contact__email" data-reveal>
+          <a class="email-link" href="mailto:iamprashikkoirala@gmail.com"
+            >iamprashikkoirala@gmail.com</a
+          ><button class="copy-email" type="button" aria-label="Copy email address">
+            <svg class="icon"><use href="#icon-copy" /></svg>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© <span id="year">2026</span> Prashik Koirala</span
+      ><a href="#top"
+        >Back to top <svg class="icon"><use href="#icon-arrow" /></svg
+      ></a>
+    </footer>
+    <div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  </body>
+</html>
